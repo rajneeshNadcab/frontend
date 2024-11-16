@@ -40,43 +40,38 @@ const Footer = () => {
       icon: 'edit' as const,
       iconSize: '16px',
       text: 'Submit an issue',
-      url: issueUrl,
+      url: "#",
     },
-    {
-      icon: 'social/canny' as const,
-      iconSize: '20px',
-      text: 'Feature request',
-      url: 'https://blockscout.canny.io/feature-requests',
-    },
+   
     {
       icon: 'social/git' as const,
       iconSize: '18px',
       text: 'Contribute',
-      url: 'https://github.com/blockscout/blockscout',
+      url: '#',
     },
     {
       icon: 'social/twitter' as const,
       iconSize: '18px',
       text: 'X (ex-Twitter)',
-      url: 'https://www.twitter.com/blockscoutcom',
+      url: '#',
     },
     {
       icon: 'social/discord' as const,
       iconSize: '24px',
       text: 'Discord',
-      url: 'https://discord.gg/blockscout',
+      url: '#',
     },
     {
       icon: 'brands/blockscout' as const,
       iconSize: '18px',
       text: 'All chains',
-      url: 'https://www.blockscout.com/chains-and-projects',
+      url: '#',
     },
     {
       icon: 'donate' as const,
       iconSize: '20px',
       text: 'Donate',
-      url: 'https://github.com/sponsors/blockscout',
+      url: '#',
     },
   ];
 
@@ -124,7 +119,8 @@ const Footer = () => {
     return (
       <Box gridArea={ gridArea }>
         <Flex columnGap={ 2 } fontSize="xs" lineHeight={ 5 } alignItems="center" color="text">
-          <span>Made with</span>
+          {/* <span>Made with</span> */}
+          <span style={{fontSize:"18px", fontWeight:"bold"}}>Powered by DSC Smart Chain (L1)</span>
           {/* <Link href="https://www.blockscout.com" isExternal display="inline-flex" color={ logoColor } _hover={{ color: logoColor }}>
             <IconSvg
               name="networks/logo-placeholder"
@@ -134,9 +130,9 @@ const Footer = () => {
           </Link> */}
         </Flex>
         <Text mt={ 3 } fontSize="xs">
-          Blockscout is a tool for inspecting and analyzing EVM based blockchains. Blockchain explorer for Ethereum Networks.
+          DSC Scan is a tool for inspecting and analyzing EVM based blockchains. Blockchain explorer for DSC Networks.
         </Text>
-        <Box mt={ 6 } alignItems="start" fontSize="xs" lineHeight={ 5 }>
+        {/* <Box mt={ 6 } alignItems="start" fontSize="xs" lineHeight={ 5 }>
           { apiVersionUrl && (
             <Text>
               Backend: <Link href={ apiVersionUrl } target="_blank">{ backendVersionData?.backend_version }</Link>
@@ -148,9 +144,9 @@ const Footer = () => {
             </Text>
           ) }
           <Text>
-            Copyright { copy } Blockscout Limited 2023-{ (new Date()).getFullYear() }
+            Copyright { copy } DSC 2023-{ (new Date()).getFullYear() }
           </Text>
-        </Box>
+        </Box> */}
       </Box>
     );
   }, [ apiVersionUrl, backendVersionData?.backend_version, frontendLink, logoColor ]);
