@@ -125,13 +125,13 @@ const Footer = () => {
       <Box gridArea={ gridArea }>
         <Flex columnGap={ 2 } fontSize="xs" lineHeight={ 5 } alignItems="center" color="text">
           <span>Made with</span>
-          <Link href="https://www.blockscout.com" isExternal display="inline-flex" color={ logoColor } _hover={{ color: logoColor }}>
+          {/* <Link href="https://www.blockscout.com" isExternal display="inline-flex" color={ logoColor } _hover={{ color: logoColor }}>
             <IconSvg
               name="networks/logo-placeholder"
               width="80px"
               height={ 4 }
             />
-          </Link>
+          </Link> */}
         </Flex>
         <Text mt={ 3 } fontSize="xs">
           Blockscout is a tool for inspecting and analyzing EVM based blockchains. Blockchain explorer for Ethereum Networks.
