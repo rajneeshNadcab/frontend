@@ -64,8 +64,8 @@ const Footer = () => {
     {
       icon: 'brands/blockscout' as const,
       iconSize: '18px',
-      text: 'All chains',
-      url: '#',
+      text: 'All Explorers',
+      url: 'dscscan.io',
     },
     {
       icon: 'donate' as const,
