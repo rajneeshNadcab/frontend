@@ -31,7 +31,7 @@ export default function useAddOrSwitchChain() {
       if (code === 4902 || originalErrorCode === 4902) {
         const params = [ {
           chainId: hexadecimalChainId,
-          chainName: config.chain.name,
+          chainName: config.chain.customName?config.chain.customName:config.chain.name,
           nativeCurrency: {
             name: config.chain.currency.name,
             symbol: config.chain.currency.symbol,

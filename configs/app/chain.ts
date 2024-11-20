@@ -20,6 +20,7 @@ const verificationType: NetworkVerificationType = (() => {
 const chain = Object.freeze({
   id: getEnvValue('NEXT_PUBLIC_NETWORK_ID'),
   name: getEnvValue('NEXT_PUBLIC_NETWORK_NAME'),
+  customName: getEnvValue('NEXT_PUBLIC_NETWORK_CUSTOM_NAME'),
   shortName: getEnvValue('NEXT_PUBLIC_NETWORK_SHORT_NAME'),
   currency: {
     name: getEnvValue('NEXT_PUBLIC_NETWORK_CURRENCY_NAME'),
