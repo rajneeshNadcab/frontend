@@ -72,8 +72,9 @@ export function app(): CspDev.DirectiveDescriptor {
       // chain RPC server
       config.chain.rpcUrl,
       'https://infragrid.v.network', // RPC providers
-
+      'https://api.exdsc.org/',
       // github (spec for api-docs page)
+     
       'raw.githubusercontent.com',
     ].filter(Boolean),
 

@@ -9,9 +9,9 @@ import config from 'configs/app';
 import type { ResourceError } from 'lib/api/resources';
 import useApiQuery from 'lib/api/useApiQuery';
 import useFetch from 'lib/hooks/useFetch';
-import useIssueUrl from 'lib/hooks/useIssueUrl';
-import { copy } from 'lib/html-entities';
-import IconSvg from 'ui/shared/IconSvg';
+// import useIssueUrl from 'lib/hooks/useIssueUrl';
+// import { copy } from 'lib/html-entities';
+// import IconSvg from 'ui/shared/IconSvg';
 import { CONTENT_MAX_WIDTH } from 'ui/shared/layout/utils';
 import NetworkAddToWallet from 'ui/shared/NetworkAddToWallet';
 
@@ -32,7 +32,7 @@ const Footer = () => {
     },
   });
   const apiVersionUrl = getApiVersionUrl(backendVersionData?.backend_version);
-  const issueUrl = useIssueUrl(backendVersionData?.backend_version);
+  // const issueUrl = useIssueUrl(backendVersionData?.backend_version);
   const logoColor = useColorModeValue('blue.600', 'white');
 
   const BLOCKSCOUT_LINKS = [
@@ -40,9 +40,9 @@ const Footer = () => {
       icon: 'edit' as const,
       iconSize: '16px',
       text: 'Submit an issue',
-      url: "#",
+      url: '#',
     },
-   
+
     {
       icon: 'social/git' as const,
       iconSize: '18px',
@@ -119,20 +119,20 @@ const Footer = () => {
     return (
       <Box gridArea={ gridArea }>
         <Flex columnGap={ 2 } fontSize="xs" lineHeight={ 5 } alignItems="center" color="text">
-          {/* <span>Made with</span> */}
-          <span style={{fontSize:"18px", fontWeight:"bold"}}>Powered by DSC Smart Chain (L1)</span>
-          {/* <Link href="https://www.blockscout.com" isExternal display="inline-flex" color={ logoColor } _hover={{ color: logoColor }}>
+          { /* <span>Made with</span> */ }
+          <span style={{ fontSize: '18px', fontWeight: 'bold' }}>Powered by DSC Smart Chain (L1)</span>
+          { /* <Link href="https://www.blockscout.com" isExternal display="inline-flex" color={ logoColor } _hover={{ color: logoColor }}>
             <IconSvg
               name="networks/logo-placeholder"
               width="80px"
               height={ 4 }
             />
-          </Link> */}
+          </Link> */ }
         </Flex>
         <Text mt={ 3 } fontSize="xs">
           DSC Scan is a tool for inspecting and analyzing EVM based blockchains. Blockchain explorer for DSC Networks.
         </Text>
-        {/* <Box mt={ 6 } alignItems="start" fontSize="xs" lineHeight={ 5 }>
+        { /* <Box mt={ 6 } alignItems="start" fontSize="xs" lineHeight={ 5 }>
           { apiVersionUrl && (
             <Text>
               Backend: <Link href={ apiVersionUrl } target="_blank">{ backendVersionData?.backend_version }</Link>
@@ -146,7 +146,7 @@ const Footer = () => {
           <Text>
             Copyright { copy } DSC 2023-{ (new Date()).getFullYear() }
           </Text>
-        </Box> */}
+        </Box> */ }
       </Box>
     );
   }, [ apiVersionUrl, backendVersionData?.backend_version, frontendLink, logoColor ]);

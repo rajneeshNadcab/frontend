@@ -6,7 +6,7 @@ const appHost = getEnvValue('NEXT_PUBLIC_APP_HOST');
 const baseUrl = [
   appSchema || 'https',
   '://',
-  appHost
+  appHost,
 ].filter(Boolean).join('');
 const isDev = getEnvValue('NEXT_PUBLIC_APP_ENV') === 'development';
 
