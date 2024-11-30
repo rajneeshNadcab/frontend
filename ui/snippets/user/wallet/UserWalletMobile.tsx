@@ -1,5 +1,5 @@
 import { Drawer, DrawerBody, DrawerContent, DrawerOverlay, useDisclosure } from '@chakra-ui/react';
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import { useMarketplaceContext } from 'lib/contexts/marketplace';
 import useWeb3AccountWithDomain from 'lib/web3/useAccountWithDomain';
@@ -24,6 +24,9 @@ const UserWalletMobile = () => {
     walletMenu.onClose();
   }, [ web3Wallet, walletMenu ]);
 
+  // useEffect(()=>{
+  //   walletMenu.onClose();
+  // },[web3AccountWithDomain.address])
   const handleDisconnectClick = React.useCallback(() => {
     web3Wallet.disconnect();
     walletMenu.onClose();

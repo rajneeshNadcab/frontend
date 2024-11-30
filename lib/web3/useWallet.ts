@@ -39,6 +39,7 @@ export default function useWeb3Wallet({ source }: Params) {
     isConnectionStarted.current = false;
   }, [ source ]);
 
+  
   const handleDisconnect = React.useCallback(() => {
     disconnect();
   }, [ disconnect ]);

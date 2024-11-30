@@ -25,6 +25,7 @@ const UserProfileContentWallet = ({ onClose, className }: Props) => {
     onClose?.();
   }, [ web3Wallet, onClose ]);
 
+  
   const handleOpenWalletClick = React.useCallback(async() => {
     web3Wallet.openModal();
     await delay(300);

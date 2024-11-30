@@ -1,5 +1,6 @@
 import { defaultWagmiConfig } from '@web3modal/wagmi/react/config';
 import { http } from 'viem';
+import { injected } from '@wagmi/connectors'
 import { createConfig, type CreateConfigParameters } from 'wagmi';
 
 import config from 'configs/app';
@@ -28,6 +29,7 @@ const wagmiConfig = (() => {
     transports: {
       [currentChain.id]: http(),
     },
+    connectors: [injected()],
     projectId: feature.walletConnect.projectId,
     metadata: {
       name: `${ config.chain.name } explorer`,

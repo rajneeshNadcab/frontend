@@ -1,5 +1,5 @@
 import { PopoverBody, PopoverContent, PopoverTrigger, useDisclosure, type ButtonProps } from '@chakra-ui/react';
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import { useMarketplaceContext } from 'lib/contexts/marketplace';
 import useWeb3AccountWithDomain from 'lib/web3/useAccountWithDomain';
@@ -34,6 +34,7 @@ const UserWalletDesktop = ({ buttonSize, buttonVariant = 'header' }: Props) => {
     web3Wallet.disconnect();
     walletMenu.onClose();
   }, [ web3Wallet, walletMenu ]);
+
 
   return (
     <Popover openDelay={ 300 } placement="bottom-end" isLazy isOpen={ walletMenu.isOpen } onClose={ walletMenu.onClose }>
